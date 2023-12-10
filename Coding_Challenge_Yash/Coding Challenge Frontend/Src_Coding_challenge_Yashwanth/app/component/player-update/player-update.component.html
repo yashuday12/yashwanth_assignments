@@ -1,0 +1,36 @@
+<p>player-update works!</p>
+<div>
+    <form #formData="ngForm" (ngSubmit)="send(formData)" class="flight-form">
+    Enter Id:<input type="number" name="playerId" ngModel required><br>
+    <button type="submit">Send</button>
+</form>
+</div>
+
+<form >
+    <div class="form-group class1">
+        <label for="playerName">playerName</label>
+        <input type="text" name="playerName"  [(ngModel)]="player.playerName"   required>
+       
+    </div>
+    <div class="form-group class1">
+        <label for="jerssyNumber">jerssyNumber</label>
+        <input type="number" name="jerssyNumber"  [(ngModel)]="player.jerssyNumber" [min]="1" [max]="100" required >
+    </div>
+    <div class="form-group class1">
+        <label for="role">role</label>
+        <input type="text" name="role"   [(ngModel)]="player.role"  required>
+    </div>
+    <div class="form-group class1">
+        <label for="totalMatches">totalMatches</label>
+        <input type="number" name="totalMatches"   [(ngModel)]="player.totalMatches"  required>
+    </div>
+    <div class="form-group class1">
+        <label for="teamName">teamName</label>
+        <input type="text" name="teamName"   [(ngModel)]="player.teamName"  required>
+    </div>
+    <div class="form-group class1">
+        <label for="country">country</label>
+        <input type="text" name="country"   [(ngModel)]="player.country"  required>
+    </div>
+    <button type="submit" (click)="update(player)">Proceed</button>
+</form>
